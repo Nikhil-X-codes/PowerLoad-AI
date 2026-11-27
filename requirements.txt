@@ -9,6 +9,7 @@ seaborn==0.13.2
 # Machine learning
 scikit-learn==1.8.0
 xgboost==1.6.2
+setuptools==80.9.0
 # Optional boosting library (uncomment if installed on your platform)
 # lightgbm>=4.0.0
 
