@@ -227,4 +227,23 @@ Located in `Assignment 2/frontend/` (React + Vite + TypeScript + Tailwind CSS + 
   docker compose up --build
   ```
   Backend runs on `http://localhost:8001` and Frontend on `http://localhost:3000`.
-- **CI/CD:** [.github/workflows/assignment2-ci.yml](../.github/workflows/assignment2-ci.yml) gates `docker-build` on passing backend `pytest` and frontend `vitest` + `vite build`.
+- **CI/CD:** [.github/workflows/ci.yml](.github/workflows/ci.yml) gates `docker-build` on passing backend `pytest` and frontend `vitest` + `vite build`.
+
+## Cloud Deployment (AWS)
+Deployed with minimal configuration and serverless compute in **`ap-southeast-2` (Sydney)**:
+
+1. **Backend — Amazon ECR + Amazon ECS Express Mode:**
+   - Built from `Dockerfile` (`python:3.13-slim`, non-root `appuser`, port `8001`) and pushed to Amazon ECR (`powerload-ai-backend:latest`).
+   - Deployed via **ECS Express Mode** (`0.25 vCPU`, `1 GB` RAM, health check `/api/v1/health`).
+   - Environment variables: `ALLOWED_ORIGINS`, `MAX_CSV_UPLOAD_BYTES=10485760`, `MAX_BATCH_ROWS=50000`.
+   - Live Backend Endpoint: `https://po-7e1f45d734e34af5a0d67a79fd6b8ff9.ecs.ap-southeast-2.on.aws`
+   - Swagger Docs: `https://po-7e1f45d734e34af5a0d67a79fd6b8ff9.ecs.ap-southeast-2.on.aws/docs`
+
+2. **Frontend — AWS Amplify Hosting:**
+   - Connected to `Nikhil-X-codes/PowerLoad-AI` (`main` branch, monorepo root `frontend`).
+   - Build: `npm ci && npm run build` (`dist/`).
+   - Environment variable: `VITE_API_BASE_URL=https://po-7e1f45d734e34af5a0d67a79fd6b8ff9.ecs.ap-southeast-2.on.aws`.
+   - CORS is restricted by setting `ALLOWED_ORIGINS` on the ECS service to the Amplify frontend domain.
+
+3. **Single-VM Alternative (EC2 Free Tier):**
+   - On a single `t3.micro` Ubuntu instance, clone the repo and run `docker compose up -d --build` to serve both Nginx/React (`:3000`) and FastAPI (`:8001`).
