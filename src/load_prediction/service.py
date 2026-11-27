@@ -38,6 +38,7 @@ DEFAULT_METRICS_PATH = PROJECT_ROOT / "outputs" / "metrics.json"
 DEFAULT_DATA_QUALITY_PATH = PROJECT_ROOT / "outputs" / "data_quality.json"
 DEFAULT_MODEL_COMPARISON_PATH = PROJECT_ROOT / "outputs" / "model_comparison.csv"
 DEFAULT_EXPLAINABILITY_PATH = PROJECT_ROOT / "outputs" / "explainability.json"
+DEFAULT_HISTORICAL_SUMMARY_PATH = PROJECT_ROOT / "outputs" / "historical_summary.json"
 DEFAULT_DATASET_PATH = PROJECT_ROOT / "data" / "load_data.csv"
 
 MODEL_VERSION = "1.0.0"
@@ -59,6 +60,7 @@ class ModelInferenceService:
     data_quality_path: Path = DEFAULT_DATA_QUALITY_PATH
     model_comparison_path: Path = DEFAULT_MODEL_COMPARISON_PATH
     explainability_path: Path = DEFAULT_EXPLAINABILITY_PATH
+    historical_summary_path: Path = DEFAULT_HISTORICAL_SUMMARY_PATH
     dataset_path: Path = DEFAULT_DATASET_PATH
     model_version: str = MODEL_VERSION
 
@@ -216,7 +218,11 @@ class ModelInferenceService:
                 self.explainability_path.read_text(encoding="utf-8")
             )
 
-        if self.dataset_path.exists():
+        if self.historical_summary_path.exists():
+            payload["historical_summary"] = json.loads(
+                self.historical_summary_path.read_text(encoding="utf-8")
+            )
+        elif self.dataset_path.exists():
             df = load_raw_data(self.dataset_path)
             dt = pd.to_datetime(df["Date_Time"], dayfirst=True)
             df = df.assign(hour=dt.dt.hour, month=dt.dt.month)

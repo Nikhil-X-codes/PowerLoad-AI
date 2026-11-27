@@ -12,7 +12,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copy only runtime source, trained model artifact, and precomputed evaluation JSON/CSV summaries
 COPY src/ ./src/
 COPY models/ ./models/
-COPY outputs/metrics.json outputs/data_quality.json outputs/model_comparison.csv outputs/explainability.json ./outputs/
+COPY outputs/metrics.json outputs/data_quality.json outputs/model_comparison.csv outputs/explainability.json outputs/historical_summary.json ./outputs/
 
 RUN useradd --create-home --shell /bin/bash appuser && chown -R appuser:appuser /app
 USER appuser

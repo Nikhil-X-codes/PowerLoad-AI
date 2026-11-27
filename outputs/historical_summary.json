@@ -1,0 +1,248 @@
+{
+  "hourly_load_distribution": [
+    {
+      "hour": 0,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 1,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 2,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 3,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 4,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 5,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 6,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 7,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 8,
+      "Light_Load": 1460,
+      "Maximum_Load": 0,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 9,
+      "Light_Load": 551,
+      "Maximum_Load": 0,
+      "Medium_Load": 909
+    },
+    {
+      "hour": 10,
+      "Light_Load": 248,
+      "Maximum_Load": 909,
+      "Medium_Load": 303
+    },
+    {
+      "hour": 11,
+      "Light_Load": 248,
+      "Maximum_Load": 1212,
+      "Medium_Load": 0
+    },
+    {
+      "hour": 12,
+      "Light_Load": 248,
+      "Maximum_Load": 303,
+      "Medium_Load": 909
+    },
+    {
+      "hour": 13,
+      "Light_Load": 248,
+      "Maximum_Load": 624,
+      "Medium_Load": 588
+    },
+    {
+      "hour": 14,
+      "Light_Load": 248,
+      "Maximum_Load": 832,
+      "Medium_Load": 380
+    },
+    {
+      "hour": 15,
+      "Light_Load": 248,
+      "Maximum_Load": 832,
+      "Medium_Load": 380
+    },
+    {
+      "hour": 16,
+      "Light_Load": 248,
+      "Maximum_Load": 832,
+      "Medium_Load": 380
+    },
+    {
+      "hour": 17,
+      "Light_Load": 248,
+      "Maximum_Load": 493,
+      "Medium_Load": 719
+    },
+    {
+      "hour": 18,
+      "Light_Load": 248,
+      "Maximum_Load": 380,
+      "Medium_Load": 832
+    },
+    {
+      "hour": 19,
+      "Light_Load": 248,
+      "Maximum_Load": 380,
+      "Medium_Load": 832
+    },
+    {
+      "hour": 20,
+      "Light_Load": 249,
+      "Maximum_Load": 95,
+      "Medium_Load": 1117
+    },
+    {
+      "hour": 21,
+      "Light_Load": 248,
+      "Maximum_Load": 0,
+      "Medium_Load": 1212
+    },
+    {
+      "hour": 22,
+      "Light_Load": 248,
+      "Maximum_Load": 285,
+      "Medium_Load": 927
+    },
+    {
+      "hour": 23,
+      "Light_Load": 1157,
+      "Maximum_Load": 95,
+      "Medium_Load": 208
+    }
+  ],
+  "monthly_load_distribution": [
+    {
+      "month": 1,
+      "Light_Load": 1464,
+      "Maximum_Load": 648,
+      "Medium_Load": 864
+    },
+    {
+      "month": 2,
+      "Light_Load": 1624,
+      "Maximum_Load": 456,
+      "Medium_Load": 608
+    },
+    {
+      "month": 3,
+      "Light_Load": 1408,
+      "Maximum_Load": 672,
+      "Medium_Load": 896
+    },
+    {
+      "month": 4,
+      "Light_Load": 1368,
+      "Maximum_Load": 648,
+      "Medium_Load": 864
+    },
+    {
+      "month": 5,
+      "Light_Load": 1520,
+      "Maximum_Load": 624,
+      "Medium_Load": 832
+    },
+    {
+      "month": 6,
+      "Light_Load": 1480,
+      "Maximum_Load": 600,
+      "Medium_Load": 800
+    },
+    {
+      "month": 7,
+      "Light_Load": 1352,
+      "Maximum_Load": 696,
+      "Medium_Load": 928
+    },
+    {
+      "month": 8,
+      "Light_Load": 1688,
+      "Maximum_Load": 552,
+      "Medium_Load": 736
+    },
+    {
+      "month": 9,
+      "Light_Load": 1592,
+      "Maximum_Load": 552,
+      "Medium_Load": 736
+    },
+    {
+      "month": 10,
+      "Light_Load": 1464,
+      "Maximum_Load": 648,
+      "Medium_Load": 864
+    },
+    {
+      "month": 11,
+      "Light_Load": 1368,
+      "Maximum_Load": 648,
+      "Medium_Load": 864
+    },
+    {
+      "month": 12,
+      "Light_Load": 1745,
+      "Maximum_Load": 528,
+      "Medium_Load": 704
+    }
+  ],
+  "usage_kwh_by_load_type": [
+    {
+      "Load_Type": "Light_Load",
+      "count": 17279,
+      "mean": 9.73,
+      "median": 3.42,
+      "min": 0.0,
+      "max": 304.707
+    },
+    {
+      "Load_Type": "Maximum_Load",
+      "count": 6958,
+      "mean": 66.946,
+      "median": 58.9,
+      "min": 2.92,
+      "max": 401.782
+    },
+    {
+      "Load_Type": "Medium_Load",
+      "count": 9245,
+      "mean": 43.24,
+      "median": 35.93,
+      "min": 2.52,
+      "max": 435.019
+    }
+  ]
+}
