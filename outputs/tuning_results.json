@@ -1,0 +1,71 @@
+{
+  "cv_strategy": "TimeSeriesSplit(n_splits=3)",
+  "primary_metric": "f1_macro",
+  "n_iter_per_model": 4,
+  "random_seed": 42,
+  "dev_rows": 32064,
+  "winner": {
+    "name": "RandomForest",
+    "feature_set": "combined",
+    "best_cv_macro_f1": 0.9082,
+    "best_params": {
+      "n_estimators": 250,
+      "min_samples_leaf": 1,
+      "max_depth": 15,
+      "class_weight": "balanced_subsample"
+    },
+    "search_time_sec": 29.936
+  },
+  "candidates": [
+    {
+      "name": "RandomForest",
+      "feature_set": "combined",
+      "best_cv_macro_f1": 0.9082,
+      "best_params": {
+        "n_estimators": 250,
+        "min_samples_leaf": 1,
+        "max_depth": 15,
+        "class_weight": "balanced_subsample"
+      },
+      "search_time_sec": 29.936
+    },
+    {
+      "name": "XGBoost",
+      "feature_set": "combined",
+      "best_cv_macro_f1": 0.9028,
+      "best_params": {
+        "subsample": 0.8,
+        "n_estimators": 250,
+        "max_depth": 4,
+        "learning_rate": 0.05,
+        "colsample_bytree": 0.8
+      },
+      "search_time_sec": 31.122
+    },
+    {
+      "name": "HistGradientBoosting",
+      "feature_set": "combined",
+      "best_cv_macro_f1": 0.8981,
+      "best_params": {
+        "min_samples_leaf": 20,
+        "max_iter": 300,
+        "max_depth": null,
+        "learning_rate": 0.15,
+        "class_weight": "balanced"
+      },
+      "search_time_sec": 17.847
+    },
+    {
+      "name": "RandomForest_measurement_only",
+      "feature_set": "measurement_only",
+      "best_cv_macro_f1": 0.7952,
+      "best_params": {
+        "n_estimators": 250,
+        "min_samples_leaf": 5,
+        "max_depth": 25,
+        "class_weight": "balanced"
+      },
+      "search_time_sec": 24.217
+    }
+  ]
+}

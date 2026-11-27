@@ -1,0 +1,17 @@
+{
+  "model_name": "RandomForest",
+  "feature_set": "combined",
+  "best_params": {
+    "n_estimators": 250,
+    "min_samples_leaf": 1,
+    "max_depth": 15,
+    "class_weight": "balanced_subsample"
+  },
+  "classes": [
+    "Light_Load",
+    "Maximum_Load",
+    "Medium_Load"
+  ],
+  "train_rows": 32064,
+  "security_note": "Never load untrusted .joblib files; joblib uses pickle deserialization."
+}

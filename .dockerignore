@@ -1,0 +1,15 @@
+# Exclude training datasets, notebooks, tests, caches, and frontend artifacts from backend image
+data/
+notebooks/
+tests/
+frontend/
+.pytest_cache/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+outputs/figures/
+outputs/predictions.csv
+outputs/.mplconfig/
+.git/
+
